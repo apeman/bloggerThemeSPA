@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns='http://w3.org' xmlns:b='http://google.com' xmlns:data='http://google.com' xmlns:expr='http://google.com'>
+<head>
+  <title><data:blog.pageTitle/></title>
+  <b:skin><![CDATA[
+    /* Zero CSS Bloat */
+  ]]></b:skin>
+</head>
+<body>
+  <!-- Required Layout Sections -->
+  <b:section id='main' showaddelement='yes'>
+    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='yes'>
+      <b:includable id='main'>
+        
+        <!-- Loop through and display bare text posts -->
+        <b:loop values='data:posts' var='post'>
+          <h1><data:post.title/></h1>
+          <div><data:post.body/></div>
+          <hr/>
+        </b:loop>
+
+      </b:includable>
+    </b:widget>
+  </b:section>
+</body>
+</html>
